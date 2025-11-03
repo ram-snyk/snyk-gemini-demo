@@ -55,7 +55,7 @@ def ping():
     except subprocess.TimeoutExpired:
         abort(408, 'Ping timeout')
     except Exception as e:
-        abort(500, 'Ping failed')
+        abort(500, f'Ping failed: {str(e)}')
 
 @app.route('/api/user/<int:user_id>')
 def get_user(user_id):
