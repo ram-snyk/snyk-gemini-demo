@@ -429,7 +429,6 @@ jobs:
           
           echo "---" >> $GITHUB_STEP_SUMMARY
           echo "📊 View detailed reports in [GitHub Security tab](https://github.com/${{ github.repository }}/security/code-scanning)" >> $GITHUB_STEP_SUMMARY
-```production
           secrets: |
             SECRET_KEY=SECRET_KEY:latest
             JWT_SECRET=JWT_SECRET:latest
@@ -520,6 +519,5 @@ jobs:
           
           echo "---" >> $GITHUB_STEP_SUMMARY
           echo "📊 View detailed reports in [GitHub Security tab](https://github.com/${{ github.repository }}/security/code-scanning)" >> $GITHUB_STEP_SUMMARY
-```
 
 ### Updated CI/CD Pipeline Summary
