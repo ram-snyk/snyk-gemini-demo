@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "snyk": {
+      "command": "/usr/local/bin/snyk",
+      "args": [
+        "mcp",
+        "-t",
+        "stdio"
+      ]
+    }
+  }
+}
