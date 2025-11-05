@@ -13,3 +13,5 @@ Gemini offers secure fix suggestions
 Code is pushed to GitHub
 
 GitHub Actions runs CI/CD (tests, build, deploy)
+
+Snyk Security is a Gate to the CI/CD pipeline
