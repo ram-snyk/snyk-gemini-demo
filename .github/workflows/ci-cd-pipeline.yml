@@ -203,7 +203,7 @@ jobs:
       - name: Show deployment URL
         run: |
           echo "🚀 Production deployed successfully!"
-          echo "🌐 URL: ${{ steps.resolve-production.outputs.service_url }}"
+          echo "🌐 URL: ${{ steps.resolve-production.outputs.service_url }}/health"
           
       - name: Run smoke tests
         run: |

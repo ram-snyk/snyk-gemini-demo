@@ -8,5 +8,8 @@
         "stdio"
       ]
     }
-  }
+  },
+
+  "coreTools": ["ShellTool"]
+  // or simply: "coreTools": ["ShellTool"]]
 }

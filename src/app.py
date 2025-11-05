@@ -70,6 +70,7 @@ def get_user(user_id):
         'username': f'user_{user_id}'
     })
 
+
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
     debug = os.getenv('FLASK_ENV') == 'development'
