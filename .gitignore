@@ -1,0 +1,31 @@
+# --- Terraform: safe for IaC scanning ---
+
+# Local .terraform directories (provider plugins, cache)
+**/.terraform/*
+
+# Terraform state files — sensitive!
+*.tfstate
+*.tfstate.*
+
+# Crash logs (debug info)
+crash.log
+crash.*.log
+
+# Sensitive variable files
+terraform.tfvars
+*.auto.tfvars
+*.tfvars.json
+
+# Terraform plan outputs
+*.tfplan
+*.tfplan.json
+
+# Optional: ignore local overrides or environment configs
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Backup and temp files
+*.bak
+*.tmp
