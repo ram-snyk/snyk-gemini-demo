@@ -29,3 +29,6 @@ override.tf.json
 # Backup and temp files
 *.bak
 *.tmp
+
+ .terraform.lock.hcl
+ 
