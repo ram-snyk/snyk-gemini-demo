@@ -1,4 +1,6 @@
 import os
+import scipy.io.wavfile
+
 from openai import OpenAI
 from transformers import pipeline
 from dotenv import load_dotenv
@@ -41,16 +43,12 @@ def text_to_speech(text, output_file_path="output.wav"):
         print("Hugging Face TTS pipeline not initialized. Cannot perform text-to-speech.")
         return False
     try:
-        # The output of the pipeline is typically a dictionary with 'audio' and 'sampling_rate'
-        # You might need to adjust this based on the specific TTS model used.
-        # For simplicity, we'll assume it returns audio data directly or in a format
-        # that can be saved. This part might require more specific handling
-        # depending on the chosen model and desired output format.
-        # For many models, the output is a numpy array, which can be saved using scipy.io.wavfile
-        # import scipy.io.wavfile
-        # scipy.io.wavfile.write(output_file_path, rate=speech["sampling_rate"], data=speech["audio"])
         speech = tts_pipeline(text)
-        print(f"Text converted to speech and would be saved to {output_file_path} (actual saving logic depends on TTS model output).")
+
+        # Example of using the 'speech' variable
+        scipy.io.wavfile.write(output_file_path, rate=speech["sampling_rate"], data=speech["audio"])
+
+        print(f"Text converted to speech and saved to {output_file_path}.")
         return True
     except Exception as e:
         print(f"Error during text-to-speech conversion: {e}")
